@@ -48,7 +48,7 @@ window.addEventListener('load', function(){
 				if(head.x==tmp.x && head.y == tmp.y)
 					return false;
 				tmp = tmp.next;
-			}while(tmp !=null && tmp.next!=null);
+			}while(tmp !=null);
 			if(head.x==food.x && head.y==food.y){
 				setScore(++score);
 				generateFood();
