@@ -50,7 +50,7 @@ window.addEventListener('load', function(){
 				tmp = tmp.next;
 			}while(tmp !=null && tmp.next!=null);
 			if(head.x==food.x && head.y==food.y){
-				setScore(score++);
+				setScore(++score);
 				generateFood();
 			}
 			else{
