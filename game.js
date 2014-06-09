@@ -92,20 +92,25 @@ window.addEventListener('load', function(){
 	}
 
 	function windowKeyDown(e){
+		var dir;
 		switch(e.keyCode){
 			case 37:
-				direction = { x:-1,y:0 };
+				dir = { x:-1,y:0 };
 				break;
 			case 39:
-				direction = { x:1,y:0 };
+				dir = { x:1,y:0 };
 				break;
 			case 38:
-				direction = { x:0,y:-1 };
+				dir = { x:0,y:-1 };
 				break;
 			case 40:
-				direction = { x:0,y:1 };      
+				dir = { x:0,y:1 };      
 				break;
 		}
+		console.log(dir);
+		console.log(direction);
+		if(direction == null || !(direction.x + dir.x == 0 && direction.y + dir.y == 0))
+			direction = dir;
 	}
 
 	function createNode(x,y,next){
